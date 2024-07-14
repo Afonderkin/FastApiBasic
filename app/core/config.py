@@ -6,5 +6,7 @@ class Settings(BaseSettings):
     PROJECT_VERSION: str = "1.0.0"
     PROJECT_DESCRIPTION: str = "A template for FastAPI projects"
 
+    DATABASE_URL: str = "postgresql+asyncpg://user:password@localhost/dbname"
+
 
 settings = Settings()

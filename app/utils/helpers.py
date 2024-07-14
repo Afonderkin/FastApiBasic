@@ -1,2 +1,2 @@
-def some_helper_function():
+async def some_helper_function():
     return "Helper function result"
