@@ -27,7 +27,7 @@
 ## **Установка**
 
 1. *Клонируйте репозиторий:*
-`git clone https://github.com/Afonderkin/FastApiBasic.git`<br>
+`git clone https://github.com/Afonderkin/FastApiBasic.git`  
 `cd FastApiBasic`
 
 2. *Установите зависимости:*
@@ -36,8 +36,8 @@
 ## **запуск-приложения**
 
 1. *Запустите приложение:*
-`uvicorn app.main:app --reload`
-Приложение будет доступно по адресу http://127.0.0.1:8000
+`uvicorn app.main:app --reload`  
+Приложение будет доступно по адресу http://127.0.0.1:8000  
 Документация API будет доступна по адресу http://127.0.0.1:8000/docs
 
 ## **Запуск тестов**
@@ -50,41 +50,41 @@
 
 ## **Структура проекта**
 
-FastApiBasic/
-├── app/
-│ ├── init.py
-│ ├── main.py
-│ ├── api/
-│ │ ├── init.py
-│ │ ├── endpoints/
-│ │ │ ├── init.py
-│ │ │ ├── example.py
-│ ├── core/
-│ │ ├── init.py
-│ │ ├── config.py
-│ ├── services/
-│ │ ├── init.py
-│ │ ├── example_service.py
-│ ├── models/
-│ │ ├── init.py
-│ │ ├── example_model.py
-│ ├── repositories/
-│ │ ├── init.py
-│ │ ├── example_repository.py
-│ ├── schemas/
-│ │ ├── init.py
-│ │ ├── example_schema.py
-│ ├── utils/
-│ │ ├── init.py
-│ │ ├── helpers.py
-├── tests/
-│ ├── init.py
-│ ├── conftest.py
-│ ├── test_example.py
-├── .gitignore
-├── pytest.ini
-├── requirements.txt
-├── README.md
+FastApiBasic/  
+├── app/  
+│ ├── init.py  
+│ ├── main.py  
+│ ├── api/  
+│ │ ├── init.py  
+│ │ ├── endpoints/  
+│ │ │ ├── init.py  
+│ │ │ ├── example.py  
+│ ├── core/  
+│ │ ├── init.py  
+│ │ ├── config.py  
+│ ├── services/  
+│ │ ├── init.py  
+│ │ ├── example_service.py  
+│ ├── models/  
+│ │ ├── init.py  
+│ │ ├── example_model.py  
+│ ├── repositories/  
+│ │ ├── init.py  
+│ │ ├── example_repository.py  
+│ ├── schemas/  
+│ │ ├── init.py  
+│ │ ├── example_schema.py  
+│ ├── utils/  
+│ │ ├── init.py  
+│ │ ├── helpers.py  
+├── tests/  
+│ ├── init.py  
+│ ├── conftest.py  
+│ ├── test_example.py  
+├── .gitignore  
+├── pytest.ini  
+├── requirements.txt  
+├── README.md  
 
 ## **Пакеты и модули**
 
