@@ -1,10 +1,14 @@
-from sqlalchemy.ext.asyncio import AsyncSession
+from typing import TYPE_CHECKING
 from sqlalchemy import select
 from app.models.example_model import ExampleModel
 
 
+if TYPE_CHECKING:
+    from sqlalchemy.ext.asyncio import AsyncSession
+
+
 class ExampleRepository:
-    def __init__(self, db: AsyncSession):
+    def __init__(self, db: "AsyncSession"):
         self.db = db
 
     async def get_example(self, example_id: int):

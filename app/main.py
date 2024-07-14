@@ -1,9 +1,13 @@
 import uvicorn
 
 from app import create_app, settings
+from typing import TYPE_CHECKING
 
 
-app = create_app()
+if TYPE_CHECKING:
+    from fastapi import FastAPI
+
+app: "FastAPI" = create_app()
 
 
 if __name__ == "__main__":
