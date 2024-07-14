@@ -1,7 +1,13 @@
 import logging
 from logging.config import dictConfig
 
+from pathlib import Path
+
 from pydantic_settings import BaseSettings
+
+
+log_dir = Path(__file__).resolve().parent.parent / "logs"
+log_dir.mkdir(parents=True, exist_ok=True)
 
 
 class Settings(BaseSettings):
@@ -19,14 +25,14 @@ class Settings(BaseSettings):
     API_V1__PREFIX: str = "/api/v1"
 
     """ Uvicorn-prefix """
-    HOST: str = "0.0.0.0"
+    HOST: str = "127.0.0.1"
     PORT: int = 8000
 
     """ Logging-settings """
-    LOG_LEVEL: int = logging.INFO
+    LOG_LEVEL: int = logging.DEBUG
     LOG_FORMAT: str = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     LOG_DATE_FORMAT: str = "%Y-%m-%d %H:%M:%S"
-    LOG_FILE: str = "app.log"
+    LOG_FILE: str = str(log_dir / "app.log")
 
 
 settings = Settings()
@@ -59,6 +65,3 @@ def configure_logging(settings: Settings):
         },
     }
     dictConfig(logging_config)
-
-
-configure_logging(settings=settings)
