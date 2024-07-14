@@ -26,8 +26,8 @@
 ## **Установка**
 
 1. *Клонируйте репозиторий:*
-`git clone https://github.com/yourusername/fastapi-template.git`
-`cd fastapi-template`
+`git clone https://github.com/Afonderkin/FastApiBasic.git`<br>
+`cd FastApiBasic`
 
 2. *Установите зависимости:*
 `pip install -r requirements.txt`
@@ -49,37 +49,37 @@
 
 ## **Структура проекта**
 
-fastapi-template/
+FastApiBasic/
 ├── app/
-│   ├── __init__.py
-│   ├── main.py
-│   ├── api/
-│   │   ├── __init__.py
-│   │   ├── endpoints/
-│   │   │   ├── __init__.py
-│   │   │   ├── example.py
-│   ├── core/
-│   │   ├── __init__.py
-│   │   ├── config.py
-│   ├── services/
-│   │   ├── __init__.py
-│   │   ├── example_service.py
-│   ├── models/
-│   │   ├── __init__.py
-│   │   ├── example_model.py
-│   ├── repositories/
-│   │   ├── __init__.py
-│   │   ├── example_repository.py
-│   ├── schemas/
-│   │   ├── __init__.py
-│   │   ├── example_schema.py
-│   ├── utils/
-│   │   ├── __init__.py
-│   │   ├── helpers.py
+│ ├── init.py
+│ ├── main.py
+│ ├── api/
+│ │ ├── init.py
+│ │ ├── endpoints/
+│ │ │ ├── init.py
+│ │ │ ├── example.py
+│ ├── core/
+│ │ ├── init.py
+│ │ ├── config.py
+│ ├── services/
+│ │ ├── init.py
+│ │ ├── example_service.py
+│ ├── models/
+│ │ ├── init.py
+│ │ ├── example_model.py
+│ ├── repositories/
+│ │ ├── init.py
+│ │ ├── example_repository.py
+│ ├── schemas/
+│ │ ├── init.py
+│ │ ├── example_schema.py
+│ ├── utils/
+│ │ ├── init.py
+│ │ ├── helpers.py
 ├── tests/
-│   ├── __init__.py
-│   ├── conftest.py
-│   ├── test_example.py
+│ ├── init.py
+│ ├── conftest.py
+│ ├── test_example.py
 ├── .gitignore
 ├── pytest.ini
 ├── requirements.txt
@@ -128,6 +128,4 @@ fastapi-template/
 Тесты находятся в директории *tests/*. Для запуска тестов используйте команду `pytest`.
 Вы можете настроить логирование тестов, используя параметры *pytest*,
 как описано в разделе [Запуск тестов](#запуск-тестов)
-=======
-# FastApiBasic
->>>>>>> 17c304002e93b3f0e5d026d7f629064843be53e7
+
