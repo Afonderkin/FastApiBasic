@@ -1,10 +1,13 @@
-from sqlalchemy.orm import Session
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy import select
 from app.models.example_model import ExampleModel
 
 
 class ExampleRepository:
-    def __init__(self, db: Session):
+    def __init__(self, db: AsyncSession):
         self.db = db
 
-    def get_example(self, example_id: int):
-        return self.db.query(ExampleModel).filter(ExampleModel.id == example_id).first()
+    async def get_example(self, example_id: int):
+        query = select(ExampleModel).where(ExampleModel.id == example_id)
+        result = await self.db.execute(query)
+        return result.scalars().first()
