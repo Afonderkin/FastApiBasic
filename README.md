@@ -27,11 +27,11 @@
 
 ## **Установка**
 
-1. *Клонируйте репозиторий:*
+1. *Клонируйте репозиторий:*  
 `git clone https://github.com/Afonderkin/FastApiBasic.git`  
 `cd FastApiBasic`
 
-2. *Создайте виртуальное окружение и активируйте его:*
+2. *Создайте виртуальное окружение и активируйте его:*  
 `python -m venv venv`  
 `source venv/bin/activate`
 
