@@ -24,8 +24,11 @@ class Settings(BaseSettings):
     EXPIRE_ON_COMMIT: bool = False
     FUTURE: bool = True
 
-    """ Prefix-settings """
+    """ Prefix-and-tags-settings """
     API_V1__PREFIX: str = "/api/v1"
+
+    API_EXAMPLE__PREFIX: str = "/example"
+    EXAMPLE__TAG: str = "Example"
 
     """ Uvicorn-prefix """
     HOST: str = "127.0.0.1"
