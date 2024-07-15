@@ -2,9 +2,12 @@ from pydantic import BaseModel
 
 
 class ExampleSchema(BaseModel):
-    id: int
     name: str
 
+
+class ExampleSchemaRead(ExampleSchema):
+    id: int
+
     class Config:
-        orm_mode = True
+        from_attributes = True
         
