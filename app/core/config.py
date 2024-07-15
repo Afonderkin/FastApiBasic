@@ -27,7 +27,7 @@ class Settings(BaseSettings):
     """ Prefix-and-tags-settings """
     API_V1__PREFIX: str = "/api/v1"
 
-    API_EXAMPLE__PREFIX: str = "/example"
+    API_EXAMPLE__PREFIX: str = API_V1__PREFIX + "/example"
     EXAMPLE__TAG: str = "Example"
 
     """ Uvicorn-prefix """
