@@ -60,6 +60,12 @@ cover/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+*.db
+
+# Alembic
+migrations/versions/*.py
+migrations/versions/*.pyc
+alembic.ini
 
 # Flask stuff:
 instance/

@@ -3,8 +3,10 @@ from logging.config import dictConfig
 
 from pathlib import Path
 
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
+
+env_path = Path(__file__).resolve().parent.parent.parent / ".env"
 
 log_dir = Path(__file__).resolve().parent.parent / "logs"
 log_dir.mkdir(parents=True, exist_ok=True)
@@ -18,6 +20,7 @@ class Settings(BaseSettings):
 
     """ db-settings """
     DATABASE_URL: str = "postgresql+asyncpg://user:password@localhost/dbname"
+    DATABASE_URL_ALEMBIC: str = "postgresql+asyncpg://user:password@localhost/dbname"
     EXPIRE_ON_COMMIT: bool = False
     FUTURE: bool = True
 
@@ -33,6 +36,8 @@ class Settings(BaseSettings):
     LOG_FORMAT: str = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     LOG_DATE_FORMAT: str = "%Y-%m-%d %H:%M:%S"
     LOG_FILE: str = str(log_dir / "app.log")
+
+    model_config = SettingsConfigDict(env_file=env_path)
 
 
 settings = Settings()
