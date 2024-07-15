@@ -53,7 +53,6 @@ async def edit_example(
 async def delete_example(
         id: int,
         uow: UOWDep,
-        example: Annotated[ExampleSchema, Depends()],
 ) -> dict:
     await ExampleService().delete_obj(uow, id)
     return {"status": "ok"}

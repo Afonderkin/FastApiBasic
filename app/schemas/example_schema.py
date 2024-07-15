@@ -10,4 +10,7 @@ class ExampleSchemaRead(ExampleSchema):
 
     class Config:
         from_attributes = True
-        
+
+
+class ExampleSchemaDelete(BaseModel):
+    pass
