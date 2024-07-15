@@ -63,6 +63,7 @@ FastApiBasic/
 │ ├── core/
 │ │ ├── init.py
 │ │ ├── config.py
+│ │ ├── db.py
 │ ├── services/
 │ │ ├── init.py
 │ │ ├── example_service.py
@@ -71,19 +72,21 @@ FastApiBasic/
 │ │ ├── example_model.py
 │ ├── repositories/
 │ │ ├── init.py
+│ │ ├── base_repository.py
 │ │ ├── example_repository.py
 │ ├── schemas/
 │ │ ├── init.py
 │ │ ├── example_schema.py
 │ ├── utils/
 │ │ ├── init.py
+│ │ ├── dependencies.py
 │ │ ├── helpers.py
-├── tests/
-│ ├── init.py
-│ ├── conftest.py
-│ ├── test_example.py
+│ │ ├── unitofwork.py
+├── migrations/
+│ ├── env.py
+│ ├── README
+│ ├── script.py.mako
 ├── .gitignore
-├── pytest.ini
 ├── requirements.txt
 ├── README.md
 ```
