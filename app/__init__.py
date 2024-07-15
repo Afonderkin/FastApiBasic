@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
 from app.core.config import settings
-from app.api.endpoints import example
+from app.api.endpoints import all_routers
 
 
 def create_app() -> FastAPI:
@@ -11,6 +11,7 @@ def create_app() -> FastAPI:
         description=settings.PROJECT_DESCRIPTION,
     )
     # Include routers
-    app.include_router(example.router, prefix=settings.API_V1__PREFIX)
+    for router in all_routers:
+        app.include_router(router)
 
     return app
